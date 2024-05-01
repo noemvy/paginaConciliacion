@@ -46,7 +46,7 @@
     </main>
 
     <script src="../funciones/script.js"></script>
-    <script src="../funciones/chequeFunciones.js"></script>
+    <script src="../funciones/chequeFunciones.js"></script> <!--funcion de cheque!-->
 </body>
 
 
