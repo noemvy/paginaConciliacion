@@ -9,7 +9,7 @@
     <title> Conciliacion Bancaria </title>
 </head>
 <body>
-    
+<form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
     <div class="contenido">
 
         <h2 class="tituloCreacion"> Anulacion de Cheques </h2>
@@ -20,8 +20,8 @@
 
                 <label> No. de Cheque </label> <br>
 
-                <input type="text" name="" id="">
-                <button type="button">Buscar</button>
+                <input type="text" name="numero_cheque" id="numero_cheque"value="<?php  echo $numero_cheque?>">
+                <button type="submit" name="buscar">Buscar</button>
 
             </div>
 
@@ -30,16 +30,18 @@
             <div class="segundoCampoCheque">
 
                 <label> Fecha: </label> <br>
-                <input type="date" name="" id=""> <br> <br>
+                <input type="date" id="fechaCheque" name="fechaCheque " disabled value="<?php echo $fechaCheque ?>"><br> <br>
 
-                <label> Paguese a orden de: </label> <br>
-                <input class="ordenPrimerCampo" type="text" name="" id=""> <br> <br>
+                <label for="paguese">Páguese a la orden de:</label> <br>
+                <input type="text" id="pagueseALaOrden" name="pagueseALaOrden" disabled
+                value="<?php echo $proveedorNombre ?>"> <br> <br>
                
                 <label> La suma de: </label>  <br>
-                <input class="sumaPrimerCampo" type="text" name="" id=""> <br> <br>
+                <input type="text" name="monto" id="monto" disabled value="<?php echo $monto ?>"><br><br>
 
-                <label> Descripcion de gastos: </label> <br>
-                <input class="detalleCampo" type="text" name="" id="">
+                <label for="descripcion">Descripción de Gasto</label><br>
+                <textarea name="descripcion" id="descripcion" cols="30" rows="10"
+                disabled><?php echo $descripcion ?></textarea> <br>
 
             </div>
 
@@ -52,7 +54,7 @@
             <div class="objeto">
 
                 <label> Fecha Anulacion: </label> <br>
-                <input type="date" name="" id="">
+                <input type="date" name="fechaAnulado" id="fechaAnulado"  value ="<?php  echo $fechaAnulado ?>"><br>
 
             </div>
 
@@ -60,7 +62,7 @@
             <div class="camposObjeto">
 
                 <label for=""> Detalle Anulacion: </label> <br>
-                <textarea class="areaDetalle" name="" id="" cols="0" rows="0"></textarea>
+                <textarea name="detalleAnulado" id="detalleAnulado" cols="30" rows="10"><?php echo $detalleAnulado ?></textarea>
 
             </div>
 
@@ -70,15 +72,15 @@
 
         <div class="botones">
 
-            <button type="button"> Anular </button>
+        <button type="submit" name="anular" <?php echo $disabledAnular; ?>>Anular</button><br>
 
 
         </div>
 
     </div>
 
-    <script src="script.js"></script>
+</form>
 
 </body>
-
+<script src="script.js"></script>
 </html>
