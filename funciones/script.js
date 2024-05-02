@@ -18,11 +18,6 @@ function cargarPagina(pagina) {
 window.onload = function () {
     // Obtiene el identificador de página de la URL
     var pagina = window.location.hash.substr(1);
-    // Si la URL no tiene un identificador de página, carga la página predeterminada
-    if (!pagina) {
-        pagina = 'inicio'; // Página predeterminada
-    }
-    // Carga la página inicial
     cargarPagina(pagina);
 }
 
