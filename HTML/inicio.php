@@ -19,13 +19,13 @@
 
             <a href="#" onclick="cargarPagina('inicio2')"> Inicio </a>
             <a href="#" onclick="cargarPagina('cheque')"> Cheques </a>
-            
+
             <select onchange="seleccionarOpcion(this)">
 
                 <option class="opcion1" value="null"> Operaciones Cks </option>
                 <option class="opcion1" value="anulacion"> Anulación </option>
                 <option class="opcion1" value="sacarDeCirculacion"> Sacar de Circulación </option>
-                
+
             </select>
 
 
@@ -40,14 +40,11 @@
 
     <main id="contenido">
 
-        
-        
 
     </main>
 
-    <script src="../funciones/script.js"></script>
-    <script src="../funciones/chequeFunciones.js"></script> <!--funcion de cheque!-->
 </body>
-
+<script src="../funciones/script.js"></script>
+<script src="../funciones/chequeFunciones.js"></script>
 
 </html>
